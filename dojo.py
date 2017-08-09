@@ -6,7 +6,7 @@ async def requests_coroutine(name, url):
 
 async def parallel_on_loop():
     await asyncio.gather(
-            requests_coroutine("A", "http://www.google.com"),
+            requests_coroutine("A", "https://httpbin.org/range/1024?duration=5"),
             requests_coroutine("B", "http://www.google.com"),
             requests_coroutine("C", "http://www.google.com")
             )
